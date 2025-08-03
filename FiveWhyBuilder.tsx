@@ -1,4 +1,4 @@
-
+// 5WhyBuilder.tsx
 import { useState } from "react";
 
 export default function FiveWhyBuilder() {
@@ -23,6 +23,7 @@ export default function FiveWhyBuilder() {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white shadow rounded-lg mt-8">
       <h1 className="text-2xl font-bold text-gray-800 mb-4">Start a 5-Why Analysis</h1>
+
       <div className="mb-4">
         <label className="block font-semibold text-gray-700">Problem Title</label>
         <input
@@ -31,6 +32,7 @@ export default function FiveWhyBuilder() {
           onChange={(e) => setProblem({ ...problem, title: e.target.value })}
         />
       </div>
+
       <div className="mb-4">
         <label className="block font-semibold text-gray-700">Description</label>
         <textarea
@@ -40,6 +42,7 @@ export default function FiveWhyBuilder() {
           onChange={(e) => setProblem({ ...problem, description: e.target.value })}
         />
       </div>
+
       <div className="mb-6">
         <label className="block font-semibold text-gray-700">Location / Process Area</label>
         <input
@@ -84,6 +87,7 @@ export default function FiveWhyBuilder() {
       ) : (
         <div className="mt-6">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Corrective Action</h2>
+
           <div className="mb-4">
             <label className="block font-semibold text-gray-700">Proposed Action</label>
             <textarea
@@ -93,6 +97,7 @@ export default function FiveWhyBuilder() {
               onChange={(e) => setCountermeasure({ ...countermeasure, action: e.target.value })}
             />
           </div>
+
           <div className="mb-4">
             <label className="block font-semibold text-gray-700">Responsible Owner</label>
             <input
@@ -101,6 +106,7 @@ export default function FiveWhyBuilder() {
               onChange={(e) => setCountermeasure({ ...countermeasure, owner: e.target.value })}
             />
           </div>
+
           <div className="mb-6">
             <label className="block font-semibold text-gray-700">Due Date</label>
             <input
@@ -110,6 +116,7 @@ export default function FiveWhyBuilder() {
               onChange={(e) => setCountermeasure({ ...countermeasure, dueDate: e.target.value })}
             />
           </div>
+
           <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
             Submit 5-Why Report
           </button>

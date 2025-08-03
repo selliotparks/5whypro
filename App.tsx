@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import FiveWhyBuilder from "./components/FiveWhyBuilder";
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<FiveWhyBuilder />} />
-      </Routes>
-    </BrowserRouter>
+    <main className="min-h-screen p-6 bg-gray-100">
+      <FiveWhyBuilder />
+    </main>
   );
 }
+
+export default App;
